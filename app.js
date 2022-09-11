@@ -29,8 +29,6 @@ function getRandomPhraseAsArray(arr) {
   return randomNum.split('');
 }
 
-
-
 //adds to display
 
 function addPhraseToDisplay(arr) {
@@ -47,9 +45,6 @@ function addPhraseToDisplay(arr) {
   }
 }
 
-
-
-
 //verifies letter
 function checkLetter(button) {
   let match = null;
@@ -62,7 +57,6 @@ function checkLetter(button) {
   }
   return match;
 }
-
 
 //keyboard click listener
 keyboard.addEventListener('click', (e) => {
