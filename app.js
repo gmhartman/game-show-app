@@ -32,7 +32,7 @@ function getRandomPhraseAsArray(arr) {
 //adds to display
 
 function addPhraseToDisplay(arr) {
-  const phraseList = document.querySelector('#phrase');
+  const phraseList = document.querySelector('#phrase ul');
   for (let i = 0; i < arr.length; i++) {
     const phraseLi = document.createElement('li');
     phraseLi.textContent = arr[i];
