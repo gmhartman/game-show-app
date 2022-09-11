@@ -4,7 +4,6 @@ const phrase = document.getElementById('phrase');
 const startB = document.querySelector('.btn__reset');
 const overlay = document.getElementById('overlay');
 const winLose = document.querySelector('.title');
-//let randomResult = '';
 let wrong = 0;
 const randomPhrase = [
     'you are a winner',
@@ -26,12 +25,8 @@ startB.addEventListener('click', () => {
 
 //gets random phrase from list
 function getRandomPhraseAsArray(arr) {
-  const randomNum = Math.floor(Math.random() * 5);
-  for (let i = 0; i < arr.length; i++){
-    arrRand = arr[randomNum];
-    arrRandSplit = arrRand.split('');
-  }
-  return arrRandSplit;
+  const randomNum = arr[Math.floor(Math.random() * 5)];
+  return randomNum.split('');
 }
 
 
@@ -39,16 +34,16 @@ function getRandomPhraseAsArray(arr) {
 //adds to display
 
 function addPhraseToDisplay(arr) {
+  const phraseList = document.querySelector('#phrase');
   for (let i = 0; i < arr.length; i++) {
     const phraseLi = document.createElement('li');
     phraseLi.textContent = arr[i];
+    phraseList.appendChild(phraseLi);
     if (arr[i] !== ' ') {
         phraseLi.className = 'letter';
     } else  {
         phraseLi.className = 'space';
     }
-    const ulAppend = document.querySelector('#phrase ul');
-    ulAppend.appendChild(phraseLi);
   }
 }
 
