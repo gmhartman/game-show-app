@@ -91,7 +91,8 @@ function checkWin () {
 }
 
 function reset () {
-  phrase.innerHTML = '';
+  const ulWipe = document.querySelector('#phrase ul')
+  ulWipe.innerHTML = '';
   const buttons = document.querySelectorAll('button');
   for ( let i = 0; i < buttons.length; i++) {
     buttons[i].classList.remove('chosen');
